@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="app.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <form>
+            <div class="bmiNumbers">
+                <label for="weight">Body Weight</label>
+                <input type="number" name="weight" id="weight" placeholder="Weight">
+                
+                <label for="height-ft">Height Ft</label>
+                <input type="number" id="height-ft" placeholder="Height(Feet)">
+                
+                <label for="height-in">Height In</label>
+                <input type="number" id="height-in" placeholder="Height(Inches)">
+            </div>
+            <div class="radio-buttons">
+                <div>
+                    <input class="radio-button"  type="radio" name="daily-intake" id="5cups" value="5 cups or more daily">
+                    <label for="extremely-high">Extremely High Caffeine Intake: 5 cups of coffee per day or more</label>
+                </div>
+                <div>
+                    <input class="radio-button" type="radio" name="daily-intake" id="4cups" value="3-4 cups daily">
+                    <label for="high">High Caffeine Intake: 3-4 cups of coffee per day</label>
+                </div>
+                <div>
+                    <input class="radio-button" type="radio" name="daily-intake" id="3cups" value="2 cups daily">
+                    <label for="moderate">Moderate Caffeine Intake: 2 cups of coffee per day</label>
+                </div>
+                <div>
+                    <input class="radio-button" type="radio" name="daily-intake" id="2cups" value="1 cup daily">
+                    <label for="low">Low Caffeine Intake: 1 cup of coffee per day</label>
+                </div>
+                <div>
+                    <input class="radio-button" type="radio" name="daily-intake" id="1cups" value="1 cup a week or less">
+                    <label for="extremely-low">Extremely Low Caffeine Intake: 1 cup of coffee per week or less</label>
+                </div>
+            </div>
+            <button type="submit" id="button">Submit</button>
+        </form>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
