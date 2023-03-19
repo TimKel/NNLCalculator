@@ -1,0 +1,14 @@
+
+
+.bmiNumbers{
+    border: 1px solid red;
+    display: grid;
+    margin: 20px;
+}
+
+.radio-buttons{
+    border: 1px solid blue;
+    display: flexbox;
+    justify-content: flex-start;
+    flex-direction: row;
+}
