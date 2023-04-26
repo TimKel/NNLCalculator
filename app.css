@@ -12,3 +12,12 @@
     justify-content: flex-start;
     flex-direction: row;
 }
+
+.body-type-selection{
+    display: flex;
+}
+
+.body-type-image{
+    width: 100px;
+    height: 100px;
+}
