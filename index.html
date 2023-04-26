@@ -42,7 +42,46 @@
                     <label for="extremely-low">Extremely Low Caffeine Intake: 1 cup of coffee per week or less</label>
                 </div>
             </div>
-            <button type="submit" id="button">Submit</button>
+            <p>Body type:</p><br>
+            <p>Male:</p><br>
+            <div class="body-type">
+                <!-- <p>Body type:</p><br>
+                <p>Male:</p><br> -->
+                <!-- <div>
+                    <button></button>
+                </div> -->
+                <div class="body-type-selection">
+                    <div>
+                        <label>
+                        <input type="radio" value="ectomorph" class="body-type-radio" name="body-type-radio" id="1" >
+                        <input type="image"  class="body-type-image" name="body-type" value="ectomorph" src="https://cdn3.vectorstock.com/i/1000x1000/67/52/ectomorph-male-body-type-line-icon-vector-46086752.jpg">
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                        <input type="radio" value="mesomorph" class="body-type-radio" name="body-type-radio" id="2" >
+                        <input type="image"  class="body-type-image" value="mesomorph" src="https://cdn3.vectorstock.com/i/1000x1000/69/87/mesomorph-male-body-type-glyph-icon-vector-46086987.jpg">
+                        </label>
+                    </div>
+                    <div>
+                        <label>
+                        <input type="radio" value="endomorph" class="body-type-radio" name="body-type-radio" id="3" >
+                        <input type="image"  class="body-type-image" value="endomorph" src="https://static.vecteezy.com/system/resources/previews/020/594/976/original/endomorph-male-body-type-glyph-icon-illustration-vector.jpg">
+                        </label>
+                    </div>
+                    <input type="hidden" id="body-type-selection" value="">
+                </div>
+                <!-- <lable><input type="image" name="body-type-male" value="ectomorph">EctoMale</lable><br>
+                <label><input type="radio" name="body-type-male" value="ectomorph">Ectomorph </label><br>
+                <label><input type="radio" name="body-type-male" value="endomorph">Endomorph</label><br>
+                <label><input type="radio" name="body-type-male" value="mesomorph">Mesomorph</label><br> -->
+                <p>Female:</p>
+                <label><input type="radio" name="body-type-female" value="ectomorph">Ectomorph</label><br>
+                <label><input type="radio" name="body-type-female" value="endomorph">Endomorph</label><br>
+                <label><input type="radio" name="body-type-female" value="mesomorph">Mesomorph</label><br>
+                
+            </div>
+            <input type="submit" id="submit">
         </form>
     </div>
     <script src="app.js"></script>
