@@ -3,6 +3,11 @@ let weight = document.getElementById("weight");
 let heightFt = document.getElementById("height-ft");
 let heightIn = document.getElementById("height-in");
 let submit = document.getElementById("submit")
+let baseDose = 150;
+
+
+
+console.log(baseDose)
 
 const form = document.querySelector('form');
 
@@ -66,11 +71,17 @@ function getBMI(){
     let totalHeight = Number((heightFt.value * 12)) + Number(heightIn.value)
     let heightSquared = totalHeight ** 2;
 
-    BMI = Math.floor(weight.value / heightSquared * 703) + '%';
+    BMI = Math.floor(weight.value / heightSquared * 703);
     console.log(BMI);
     return BMI;
 }
+if(BMI >= 26.5) {
+    baseDose + 25;
+}
 
+// function baseDose(baseDose){
+//     return BMI < 26.5 ? baseDose : baseDose += 25;
+// }
 form.addEventListener('submit', function(e){
     e.preventDefault();
     console.log(e)
@@ -108,5 +119,31 @@ form.addEventListener('submit', function(e){
     coffeeIntake();
     getBodyType();
 
-    alert(`Your BMI is ${BMI} and body is ${bodyTypeSelection}. Intake is ${dailyIntake}`)
+    // let intake = `${dailyIntake}`
+    // let bmi = `${BMI}`
+    // console.log("BMIIII", BMI)
+    // switch(intake, BMI) {
+    //     case "5 cups or more daily" && BMI <= 20:
+    //         console.log("super high");
+    //         break;
+    //     case "3-4 cups daily":
+    //         console.log("kinda high");
+    //         break;
+    // }
+    if(BMI >= 26.5) baseDose += 25;
+
+    if(  dailyIntake === "1 cup a week or less" || dailyIntake === "1 cup daily" && bodyTypeSelection === "ectomorph"){
+        console.log(`1 Your BMI is ${BMI}%. We suggest ${baseDose}mg.`) //150mg
+    }else if( dailyIntake === "1 cup daily" && bodyTypeSelection === "mesomorph" || "endomorph"){
+        console.log(`2 Your BMI is ${BMI}%. We suggest ${(baseDose + 25)}mg.`) //175mg
+    }else if( dailyIntake === "2 cups daily" && bodyTypeSelection === "ectomorph" || "mesomorph"){
+        console.log(`3 Your BMI is ${BMI}%. We suggest ${(baseDose + 25)}mg.`) //175mg
+    }else if( dailyIntake === "2 cups daily" && bodyTypeSelection === "endomorph" || dailyIntake === "3-4 cups daily" && bodyTypeSelection === "ectomorph" || "endomorph"){
+        console.log(`4 Your BMI is ${BMI}%. We suggest ${(baseDose + 50)}mg.`) //200mg
+    }
+    console.log("INTAKE", dailyIntake)
+    console.log("BODYTYPEEE", bodyTypeSelection)
+    alert(`Your BMI is ${BMI}% and body is ${bodyTypeSelection}. Intake is ${dailyIntake}`)
 });
+
+
